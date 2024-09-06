@@ -1,0 +1,14 @@
+CREATE database books;
+
+USE books;
+CREATE TABLE book (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255) NOT NULL,
+    Author VARCHAR(255) NOT NULL,
+    ISBN VARCHAR(13) UNIQUE NOT NULL,
+    PublishedDate DATE NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL
+);
+
+INSERT INTO books (Title, Author, ISBN, PublishedDate, Price)
+VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565', '1925-04-10', 10.99);
